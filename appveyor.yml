@@ -1,3 +1,9 @@
+version: 1.0.{build}
+environment:
+  APPVEYOR_RDP_PASSWORD:
+    secure: prROYXFdZ1WD7poOqYxXuRIF6KkKWjAWAWZX5PaHABM=
+test_script:
+- cmd: test.bat
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 on_finish:
